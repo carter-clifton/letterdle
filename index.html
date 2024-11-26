@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4cc34ebd4c.js" crossorigin="anonymous"></script>
+
+    <head>
+        <title>Letterdle</title>
+    </head>
+
+    <body>
+        <div class="stats" id="stats">
+            <div class="stats_screen">
+                <div class="header_bar">
+                    <h1>Stats</h1>
+                    <p class="icon" id="close_stats_button"> <i class="fa-regular fa-circle-xmark"></i> </p>
+                </div>
+                <div class="score">
+                    <p class="colors" id="line_1"></p>
+                    <p class="colors" id="line_2"></p>
+                    <p class="colors" id="line_3"></p>
+                    <p class="colors" id="line_4"></p>
+                    <p class="colors" id="line_5"></p>
+                    <p class="colors" id="line_6"></p>
+                    <p class="result" id="result">Do the puzzle first!</p>
+                    <p class="answer-if-fail" id="answer-if-fail"></p>
+                </div>
+                <button class="share" id="share" onclick="share_button()">Copy Results</button>
+                <div class="footer">
+                    <p class="credits">By Carter Clifton</p>
+                </div>
+            </div>
+        </div>
+        <div class="changes" id="changes">
+            <div class="changes_screen">
+                <div class="header_bar">
+                    <h1>Changelog</h1>
+                    <p class="icon" id="close_changes_button"> <i class="fa-regular fa-circle-xmark"></i> </p>
+                </div>
+                <div class="list">
+                    <h3>2024-11-25 | v 1.0.0</h3>
+                    <p>Created the game.</p>
+                </div>
+                <div class="footer">
+                    <p class="credits">By Carter Clifton</p>
+                </div>
+            </div>
+        </div>
+        <div class="bar">
+            <p id="title">letterdle</p>
+            <div class="icons">
+                <p class="icon" id="changes_button"> <i class="fa-solid fa-pen-to-square"></i> </p>
+                <p class="icon" id="stats_button"> <i class="fa-solid fa-chart-simple"></i> </p>
+            </div>
+        </div>
+        <div class="board">
+            <div class="row" id="row_1">
+                <div class="square" id="square_1_1"></div>
+                <div class="square" id="square_1_2"></div>
+                <div class="square" id="square_1_3"></div>
+                <div class="square" id="square_1_4"></div>
+                <div class="square" id="square_1_5"></div>
+            </div>
+            <div class="row" id="row_2">
+                <div class="square" id="square_2_1"></div>
+                <div class="square" id="square_2_2"></div>
+                <div class="square" id="square_2_3"></div>
+                <div class="square" id="square_2_4"></div>
+                <div class="square" id="square_2_5"></div>
+            </div>
+            <div class="row" id="row_3">
+                <div class="square" id="square_3_1"></div>
+                <div class="square" id="square_3_2"></div>
+                <div class="square" id="square_3_3"></div>
+                <div class="square" id="square_3_4"></div>
+                <div class="square" id="square_3_5"></div>
+            </div>
+            <div class="row" id="row_4">
+                <div class="square" id="square_4_1"></div>
+                <div class="square" id="square_4_2"></div>
+                <div class="square" id="square_4_3"></div>
+                <div class="square" id="square_4_4"></div>
+                <div class="square" id="square_4_5"></div>
+            </div>
+            <div class="row" id="row_5">
+                <div class="square" id="square_5_1"></div>
+                <div class="square" id="square_5_2"></div>
+                <div class="square" id="square_5_3"></div>
+                <div class="square" id="square_5_4"></div>
+                <div class="square" id="square_5_5"></div>
+            </div>
+            <div class="row" id="row_6">
+                <div class="square" id="square_6_1"></div>
+                <div class="square" id="square_6_2"></div>
+                <div class="square" id="square_6_3"></div>
+                <div class="square" id="square_6_4"></div>
+                <div class="square" id="square_6_5"></div>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="row">
+                <button class="key letter" id="q" onclick="type_letter('q')"> q </button>
+                <button class="key letter" id="w" onclick="type_letter('w')"> w </button>
+                <button class="key letter" id="e" onclick="type_letter('e')"> e </button>
+                <button class="key letter" id="r" onclick="type_letter('r')"> r </button>
+                <button class="key letter" id="t" onclick="type_letter('t')"> t </button>
+                <button class="key letter" id="y" onclick="type_letter('y')"> y </button>
+                <button class="key letter" id="u" onclick="type_letter('u')"> u </button>
+                <button class="key letter" id="i" onclick="type_letter('i')"> i </button>
+                <button class="key letter" id="o" onclick="type_letter('o')"> o </button>
+                <button class="key letter" id="p" onclick="type_letter('p')"> p </button>
+            </div>
+            <div class="row">
+                <button class="key letter" id="a" onclick="type_letter('a')"> a </button>
+                <button class="key letter" id="s" onclick="type_letter('s')"> s </button>
+                <button class="key letter" id="d" onclick="type_letter('d')"> d </button>
+                <button class="key letter" id="f" onclick="type_letter('f')"> f </button>
+                <button class="key letter" id="g" onclick="type_letter('g')"> g </button>
+                <button class="key letter" id="h" onclick="type_letter('h')"> h </button>
+                <button class="key letter" id="j" onclick="type_letter('j')"> j </button>
+                <button class="key letter" id="k" onclick="type_letter('k')"> k </button>
+                <button class="key letter" id="l" onclick="type_letter('l')"> l </button>
+            </div>
+            <div class="row">
+                <button class="key special enter" id="enter" onclick="enter_button()"> enter </button>
+                <button class="key letter" id="z" onclick="type_letter('z')"> z </button>
+                <button class="key letter" id="x" onclick="type_letter('x')"> x </button>
+                <button class="key letter" id="c" onclick="type_letter('c')"> c </button>
+                <button class="key letter" id="v" onclick="type_letter('v')"> v </button>
+                <button class="key letter" id="b" onclick="type_letter('b')"> b </button>
+                <button class="key letter" id="n" onclick="type_letter('n')"> n </button>
+                <button class="key letter" id="m" onclick="type_letter('m')"> m </button>
+                <button class="key special delete" id="delete" onclick="delete_button()"> ⌫ </button>
+            </div>
+        </div>
+    </body>
+
+    <script src="letterdle.js"></script>
+
+</html>
