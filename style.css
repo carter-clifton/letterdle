@@ -56,12 +56,12 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
     border-radius: 15%;
     margin: 2px;
-    width: 21px;
-    height: 34px;
+    width: 17px;
+    height: 30px;
     border: none;
     background-color: #636363;
     color: #ffffff;
