@@ -178,7 +178,7 @@ function show_changes_screen() {
 
 async function share_button() {
 
-    var copyText = "Numberdle " + (gameNumber) + " " + (guessNumber) + "/6\n";
+    var copyText = "Letterdle " + (gameNumber) + " " + (guessNumber) + "/6\n";
 
     for (let i = 0; i < guessNumber; i++) {
         copyText = copyText + "\n" + resultsOfGuesses[i].join("");
@@ -239,7 +239,7 @@ function daysSinceJune23rd() {
     const today = new Date();
 
     // Create a date object for June 23rd, 2024
-    const baseDate = new Date(2024, 6 - 1, 23); // Month is zero-indexed (January = 0)
+    const baseDate = new Date(2024, 11 - 1, 26); // Month is zero-indexed (January = 0)
 
     // Calculate the difference in milliseconds
     const timeDifference = today.getTime() - baseDate.getTime();
