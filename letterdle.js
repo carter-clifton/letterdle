@@ -192,8 +192,7 @@ async function share_button() {
 }
 
 async function copyToClipboard(textToCopy) {
-    // thank you Simon Dehaut, from stack overflow
-    // Navigator clipboard api needs a secure context (https)
+    // thank you Simon Dehaut, from Stack Overflow
     if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(textToCopy);
     } else {
